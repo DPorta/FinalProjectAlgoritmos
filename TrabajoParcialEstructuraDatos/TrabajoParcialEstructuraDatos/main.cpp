@@ -1,5 +1,5 @@
 #include <SFML/Graphics.hpp>
-#include <SFML/Audio.hpp>
+
 #include "pch.h"
 #include <time.h>
 #include <list>
@@ -161,8 +161,6 @@ public:
 
 };
 
-
-
 class Muro : public Entity
 {
 public:
@@ -186,7 +184,6 @@ bool isCollide(Entity *a, Entity *b)
 		(b->y - a->y)*(b->y - a->y) <
 		(a->R + b->R)*(a->R + b->R);
 }
-
 
 void usersave(list<Entity*> entities) {
 
@@ -247,8 +244,6 @@ vector<string> split(string str) {
 	return arr;
 }
 
-
-
 vector<float> convert(vector<string> arr) {
 
 	vector<float> nums(arr.size());
@@ -257,7 +252,6 @@ vector<float> convert(vector<string> arr) {
 	}
 	return nums;
 }
-
 
 void userload(list<Entity*> &entities, Texture &t1, Texture &t2, Texture &t3, Texture &t4, Texture &t5, Sprite &background, Animation &sMeta, Animation &sCaja, Animation &sMuro, Animation &sPlayer) 
 {
@@ -331,8 +325,6 @@ void userload(list<Entity*> &entities, Texture &t1, Texture &t2, Texture &t3, Te
 
 }
 
-
-
 int main()
 {
 	srand(time(0));
@@ -367,31 +359,133 @@ int main()
 
 	
 	list<Entity*> entities;
+	//CAJA
 	
-	for (int i = 0; i < 15; i++)
-	{
-		Caja *a = new Caja();
-		a->settings(sCaja, rand() % W, rand() % H, 0, 20);
-		entities.push_back(a);
-	}
+		Caja *f = new Caja();
+		f->settings(sCaja, 640, 295, 0, 20);
+		entities.push_back(f);
 
-	for (int i = 0; i < 15; i++)
+		Caja *g = new Caja();
+		g->settings(sCaja,700, 295, 0, 20);
+		entities.push_back(g);
+
+		Caja *h = new Caja();
+		h->settings(sCaja, 580, 295, 0, 20);
+		entities.push_back(h);
+
+		Caja *i = new Caja();
+		i->settings(sCaja, 580, 350, 0, 20);
+		entities.push_back(i);
+
+		Caja *j = new Caja();
+		j->settings(sCaja, 520,410, 0, 20);
+		entities.push_back(j);
+	
+	//MURO
+	for (int i = 0; i < 6; i++)
 	{
+		for (int j = 0; j < 36; j++)
+		{
 		Muro *a = new Muro();
-		a->settings(sMuro, rand() % W, rand() % H, 0, 20);
-		entities.push_back(a);
-	}
+		a->settings(sMuro, j*40, i*39, 0, 20);
+		entities.push_back(a);	
 
-	for (int i = 0; i < 4; i++)
+		}
+	}
+	for (int i = 5; i < 9; i++)
 	{
+		for (int j = 0; j < 14; j++)
+		{
+			Muro *a = new Muro();
+			a->settings(sMuro, j * 40, i * 39, 0, 20);
+			entities.push_back(a);
+
+		}
+	}
+	for (int i = 5; i < 10; i++)
+	{
+		for (int j = 20; j < 36; j++)
+		{
+			Muro *a = new Muro();
+			a->settings(sMuro, j * 40, i * 39, 0, 20);
+			entities.push_back(a);
+
+		}
+	}
+	for (int i = 9; i < 19; i++)
+	{
+		for (int j = 19; j < 36; j++)
+		{
+			Muro *a = new Muro();
+			a->settings(sMuro, j * 40, i * 39, 0, 20);
+			entities.push_back(a);
+
+		}
+	}
+	for (int i = 9; i < 12; i++)
+	{
+		for (int j = 0; j < 10; j++)
+		{
+			Muro *a = new Muro();
+			a->settings(sMuro, j * 40, i * 39, 0, 20);
+			entities.push_back(a);
+
+		}
+	}
+	for (int i = 12; i < 19; i++)
+	{
+		for (int j = 0; j < 15; j++)
+		{
+			Muro *a = new Muro();
+			a->settings(sMuro, j * 40, i * 39, 0, 20);
+			entities.push_back(a);
+
+		}
+	}
+	for (int i = 15; i < 19; i++)
+	{
+		for (int j = 15; j < 20; j++)
+		{
+			Muro *a = new Muro();
+			a->settings(sMuro, j * 40, i * 39, 0, 20);
+			entities.push_back(a);
+
+		}
+	}
+	
+
+	//META
+	
 		Entity *a = new Entity();
-		a->settings(sMeta, rand() % W, rand() % H, 0, 20);
+		a->settings(sMeta, 640, 350, 0, 20);
 		a->name = "meta";
 		entities.push_back(a);
-	}
 
+		Entity *b = new Entity();
+		b->settings(sMeta, 700, 350, 0, 20);
+		b->name = "meta";
+		entities.push_back(b);
+
+		Entity *c = new Entity();
+		c->settings(sMeta, 580, 410, 0, 20);
+		c->name = "meta";
+		entities.push_back(c);
+
+		Entity *d = new Entity();
+		d->settings(sMeta, 640, 410, 0, 20);
+		d->name = "meta";
+		entities.push_back(d);
+
+		Entity *e = new Entity();
+		e->settings(sMeta, 700, 410, 0, 20);
+		e->name = "meta";
+		entities.push_back(e);
+
+	
+
+	//Personaje
 	player *p = new player();
-	p->settings(sPlayer_right, 200, 200, 0, 25);
+	p->settings(sPlayer_right, 420, 400, 0, 25);
 	entities.push_back(p);
 
 	///// bucle principal /////
