@@ -163,6 +163,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="autosave.h" />
+    <ClInclude Include="Cargar.h" />
+    <ClInclude Include="Clases.h" />
+    <ClInclude Include="Colision.h" />
+    <ClInclude Include="Guardar.h" />
     <ClInclude Include="MyStack.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>

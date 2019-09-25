@@ -1,17 +1,22 @@
 ﻿  main.cpp
-c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\main.cpp(45): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\main.cpp(54): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\main.cpp(251): warning C4244: '=': conversión de 'double' a '_Ty'; posible pérdida de datos
+c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\clases.h(32): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\clases.h(41): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\cargar.h(18): warning C4244: '=': conversión de 'double' a '_Ty'; posible pérdida de datos
           with
           [
               _Ty=float
           ]
-c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\main.cpp(330): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\main.cpp(390): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\main.cpp(400): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\main.cpp(410): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\main.cpp(420): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\main.cpp(430): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\main.cpp(440): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\main.cpp(450): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\main.cpp(84): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\main.cpp(176): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\main.cpp(186): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\main.cpp(194): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\main.cpp(202): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\main.cpp(210): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\main.cpp(219): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\main.cpp(228): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\main.cpp(356): warning C4553: "==": el resultado de la expresión no se usa. ¿Quiso decir "="?
+c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\main.cpp(360): warning C4553: "==": el resultado de la expresión no se usa. ¿Quiso decir "="?
+c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\main.cpp(364): warning C4553: "==": el resultado de la expresión no se usa. ¿Quiso decir "="?
+c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\main.cpp(368): warning C4553: "==": el resultado de la expresión no se usa. ¿Quiso decir "="?
+c:\users\usuario\source\repos\dporta\sw32-tp-201812241-201422840-20181a258\trabajoparcialestructuradatos\trabajoparcialestructuradatos\main.cpp(372): warning C4553: "==": el resultado de la expresión no se usa. ¿Quiso decir "="?
   TrabajoParcialEstructuraDatos.vcxproj -> C:\Users\usuario\Source\Repos\DPorta\SW32-TP-201812241-201422840-20181A258\TrabajoParcialEstructuraDatos\x64\Debug\TrabajoParcialEstructuraDatos.exe
