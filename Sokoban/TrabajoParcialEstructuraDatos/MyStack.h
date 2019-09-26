@@ -34,7 +34,7 @@ public:
 		if (!is_empty()) {
 			Node* aux = myTop;
 			myTop = myTop->next;
-			delete aux;
+			//delete aux;
 			--lon;
 			return true;
 		}
