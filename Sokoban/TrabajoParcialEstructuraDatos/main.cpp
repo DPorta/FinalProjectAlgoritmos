@@ -89,6 +89,7 @@ int main()
 	int asavecont(0);
 	string ori("nada");
 	MyStack<string> autosaves;
+	MyStack<string> backwardsautosaves;
 
 	RenderWindow app(VideoMode(W, H), "Sokoban");
 	app.setFramerateLimit(60);
@@ -276,30 +277,7 @@ int main()
 				if (a->name == "player" && b->name == "caja")
 					if (isCollide(a, b))
 					{
-
 						asavecont++;
-						if (asavecont == 1) {
-							colflag0 = true;
-							autosave(entities, colflag0, colflag1, colflag2);
-							autosaves.push("autosave2.txt");   //nombres en orden inverso a los correspondientes a la logica de autosave con el proposito de invertir el orden de la pila sin usar mas de una pila
-						}
-						if (asavecont == 2) {
-							colflag1 = true;
-							autosave(entities, colflag0, colflag1, colflag2);
-							autosaves.push("autosave1.txt");
-						}
-						if (asavecont == 3) {
-							colflag2 = true;
-							autosave(entities, colflag0, colflag1, colflag2);
-							autosaves.push("autosave0.txt");
-						}
-						if (asavecont > 3) {
-							asavecont = 0;
-							autosaves.pop();
-							colflag0 = false;
-							colflag1 = false;
-							colflag2 = false;
-						}
 
 						if (a->dy != 0 && a->dx != 0)
 						{
@@ -328,6 +306,30 @@ int main()
 								a->y -= 20;
 						}
 
+						
+						if (asavecont == 1) {
+							colflag0 = true;
+							autosave(entities, colflag0, colflag1, colflag2);
+							autosaves.push("autosave2.txt");   
+						}
+						if (asavecont == 2) {
+							colflag1 = true;
+							autosave(entities, colflag0, colflag1, colflag2);
+							autosaves.push("autosave1.txt");
+						}
+						if (asavecont == 3) {
+							colflag2 = true;
+							autosave(entities, colflag0, colflag1, colflag2);
+							autosaves.push("autosave0.txt");
+						}
+						if (asavecont > 3) {
+							asavecont = 0;
+							autosaves.pop();
+							colflag0 = false;
+							colflag1 = false;
+							colflag2 = false;
+						}
+
 
 					}
 
@@ -352,32 +354,37 @@ int main()
 
 					}
 
-				if ((a->name == "caja" && b->name == "meta"))
+				if ((a->name == "caja" && b->name == "meta")) {
 					if (isCollide(a, b)) {
 
 						if (flag1 == false && flag2 == false && flag3 == false && flag4 == false && flag5 == false) {
-							flag1 == true;
+							flag1 = true;
 						}
+						else flag1 = false;
 
 						if (flag1 == true && flag2 == false && flag3 == false && flag4 == false && flag5 == false) {
-							flag2 == true;
+							flag2 = true;
 						}
+						else flag2 = false;
 
 						if (flag1 == true && flag2 == true && flag3 == false && flag4 == false && flag5 == false) {
-							flag3 == true;
+							flag3 = true;
 						}
+						else flag3 = false;
 
 						if (flag1 == true && flag2 == true && flag3 == true && flag4 == false && flag5 == false) {
-							flag4 == true;
+							flag4 = true;
 						}
+						else flag4 = false;
 
 						if (flag1 == true && flag2 == true && flag3 == true && flag4 == true && flag5 == false) {
-							flag5 == true;
-							cout << "Ganaste"; //reemplazar esto por un evento/animacion que indique la victoria
+							flag5 = true;
 						}
-
+						else flag5 = false;
 
 					}
+					
+				}
 
 			}
 
@@ -405,6 +412,10 @@ int main()
 
 			if (e->life == false) { i = entities.erase(i); delete e; }
 			else i++;
+		}
+
+		if (flag5 == true) {
+			cout << "Ganaste"; //reemplazar esto por un evento/animacion que indique la victoria
 		}
 
 
