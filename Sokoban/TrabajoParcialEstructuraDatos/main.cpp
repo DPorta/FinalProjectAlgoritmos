@@ -255,7 +255,9 @@ int main()
 		if (Keyboard::isKeyPressed(Keyboard::L)) userload(entities, t1, t2, t3, t4, t5, background, sMeta, sCaja, sMuro, sPlayer_right);
 
 		/////Retroceder un paso/colision/////
-		if (Keyboard::isKeyPressed(Keyboard::R)) gottagobackload(autosaves, entities, t1, t2, t3, t4, t5, background, sMeta, sCaja, sMuro, sPlayer_right);
+		if (autosaves.getlon() >= 3) {
+			if (Keyboard::isKeyPressed(Keyboard::R)) gottagobackload(autosaves, entities, t1, t2, t3, t4, t5, background, sMeta, sCaja, sMuro, sPlayer_right);
+		}
 
 
 		for (auto a : entities)
@@ -274,6 +276,7 @@ int main()
 				if (a->name == "player" && b->name == "caja")
 					if (isCollide(a, b))
 					{
+
 						asavecont++;
 						if (asavecont == 1) {
 							colflag0 = true;
@@ -307,13 +310,13 @@ int main()
 						}
 
 						if (a->dx > 0 && a->x - 40 < b->x)
-							b->dx = a->dx; //dx+algo para que la caja salga proyectada un poco y ya no este constantemente contando colision 
+							b->dx = a->dx+25; //dx+algo para que la caja salga proyectada un poco y ya no este constantemente contando colision 
 						if (a->dx < 0 && a->x + 40 > b->x)
-							b->dx = a->dx;
+							b->dx = a->dx-25;
 						if (a->dy > 0 && a->y + 40 < b->y)
-							b->dy = a->dy;
+							b->dy = a->dy+25;
 						if (a->dy < 0 && a->y - 40 > b->y)
-							b->dy = a->dy;
+							b->dy = a->dy-25;
 
 						if ((ori == "left" || ori == "right" || ori == "up") && b->dx == 0 && b->dy == 0) {
 							if (a->y > b->y + 15)
